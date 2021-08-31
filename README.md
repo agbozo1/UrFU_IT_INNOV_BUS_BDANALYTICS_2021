@@ -1,4 +1,4 @@
-# UrFU_IT_INNOV_BUS_BDANALYTICS_2021
+## Big Data Analysis for Business & Data Mining Curriculum
 Repo for IT Innovations in Business - Big Data Analysis Course Material
 
 The repository is prepared for two courses: Big Data Analysis for Business & Data Mining
@@ -8,11 +8,11 @@ The repository is prepared for two courses: Big Data Analysis for Business & Dat
 - Course Overview Site: https://sites.google.com/view/agbozo/teaching/data-analysis-data-analytics-in-business
 
 
-#### Schedule
+### Schedule
 ------------------------------------------------------------------------------------------------------------
 Wednesdays (16:00 - 17:30) || (17:40 - 19:05) & Thursdays (17:40 - 19:05)
 
-#### General Course Outline
+### General Course Outline
 
 * Big Data and Analysis in the Real World
 
@@ -38,7 +38,13 @@ Wednesdays (16:00 - 17:30) || (17:40 - 19:05) & Thursdays (17:40 - 19:05)
 
 * Machine Learning - Supervised & Unsupervised
 
-#### Books
+### Books
+
+Data Mining Books
+
+* Gorunescu, Florin. Data Mining: Concepts, models and techniques. Vol. 12. Springer Science & Business Media, 2011. 
+* Sullivan R. (2012) Statistical Methods. In: Introduction to Data Mining for the Life Sciences. Humana Press. https://doi.org/10.1007/978-1-59745-290-8_6 
+
 
 Python [Books]
 
@@ -55,6 +61,13 @@ R [Books]
 * Campbell, Matthew. "Learn RStudio IDE." New York: Apress (2020). 
 * Wade, Ryan. "Creating R Custom Visuals in Power BI Using ggplot2." Advanced Analytics in Power BI with R and Python. Apress, Berkeley, CA, 2020. 39-148. 
 
-#### Online Resource
+### Online Resource
 * Principles and Techniques of Data Science https://www.textbook.ds100.org/intro
 * Mining massive datasets http://www.mmds.org/
+
+
+----------------------------------------------------------------------------------------------
+### Pre-requisites (Tools)
+* Python (PyCharm - free download with university email ||  Anaconda || Google Colab - Online) - Python version 3.6
+* R (RStudio)
+* Power BI
