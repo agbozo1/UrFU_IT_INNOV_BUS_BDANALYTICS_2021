@@ -1,4 +1,4 @@
-## Big Data Analysis for Business & Data Mining Curriculum
+## Big Data Analysis for Business Curriculum
 Repo for IT Innovations in Business - Big Data Analysis Course Material
 
 The repository is prepared for two courses: Big Data Analysis for Business & Data Mining
@@ -71,3 +71,5 @@ R [Books]
 * Python (PyCharm - free download with university email ||  Anaconda || Google Colab - Online) - Python version 3.6
 * R (RStudio)
 * Power BI
+
+----------------------------------------------------------------------------------------------
