@@ -1,0 +1,132 @@
+---
+title: "Assignment 2 [Big Data Analytics for Business]" 
+output: html_notebook
+---
+
+### Case study [Data Wrangling] - Bank Marketing Data Set
+For this homework task, read the instructions and answer the questions below.
+
+The dataset was originally published in a research paper:
+*S. Moro, P. Cortez and P. Rita. A Data-Driven Approach to Predict the Success of Bank Telemarketing. Decision Support Systems, Elsevier, 62:22-31, June 2014*
+
+
+<span style="color:red">The data is related with direct marketing campaigns of a Portuguese banking institution. 
+<br/>The marketing campaigns were based on phone calls. 
+<br/>Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed.</span>
+
+
+For more information on the dataset and each column's description, visit: <http://archive.ics.uci.edu/ml/datasets/Bank+Marketing>
+
+
+### Required Packages
+- tidyverse
+- shimr
+
+
+----------------------------------------------
+**1. Load the libraries and download the dataset**
+```{r}
+library(tidyverse)
+
+data_url <- "http://archive.ics.uci.edu/ml/machine-learning-databases/00222/bank.zip"
+temporaryFile <- tempfile()
+download.file(data_url, temporaryFile)
+```
+
+
+**2. Extract (unzip) the file *bank.csv* from the *temporaryFile* variable**
+```{r}
+unzip(temporaryFile, "bank.csv")
+```
+
+
+**3. Load the dataset**
+
+_read_csv() and read_tsv() are special cases of the more general read_delim(). They're useful for reading the most common types of flat file data, comma separated values and tab separated values, respectively. read_csv2() uses ; for the field separator and , for the decimal point. This format is common in some European countries._
+
+```{r, echo=FALSE}
+bankData <- read_csv2("bank.csv")
+```
+
+
+**4. View the first 5 observations(rows)**
+
+```{r}
+head(bankData, 5)
+```
+
+
+**5. To print out the dataset/tibble's variable (column) names**
+```{r}
+bankData %>%
+  names()
+```
+
+
+**6. Let us briefly summarize the dataset (a statistical overview)**
+```{r}
+summary(bankData)
+```
+
+
+
+**7. Explaratory Data Analysis (using the *skimr* library)**
+
+Load the skimr library
+
+Evaluate the data distribution - Test for empty columns (variables)
+```{r}
+library(skimr)
+
+#distribution of data
+skimResults =
+  bankData %>%
+  skim()
+
+#print the results
+skimResults
+```
+The results above give us basic summary statistics on each of the 7 columns(variables): 
+
+```{r}
+skimResults%>%
+  names()
+```
+
+```{r}
+skimResults %>%
+  select(skim_variable,n_missing)
+```
+
+
+
+### Questions
+<span style="color:red">
+Understand each variable (column) and answer the question. Indicate the code you used to obtain each result.<br/>(Submit your answers as an .Rmd file) 
+</span>
+
+**Q1.** How many clients **subscribed** to the bank's product (term deposit)?
+
+
+**Q2.** Which **job category** do majority of the bank's clients belong to?
+
+
+**Q3.** How many **unemployed** people who were contacted in **November** have a **housing loan**?
+
+
+**Q4.** Which **month** recorded the **least calls** to **retired clients** (i.e. pensioners)?
+
+
+**Q5.** How many students are **less than 25 years old**?
+
+
+**Q6.** Which **job category** did the bank perform many **contact campaigns (phone calls)** ?
+
+
+**Q7.** Which **educational qualification** does most client's whose **campaign outcomes failed** belong to?
+
+
+
+-----------------------------------------------------
+
+<span style="float:right">eagbozo@urfu.ru</span>
